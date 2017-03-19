@@ -1,0 +1,3 @@
+﻿1>------ Build started: Project: CerdaBank, Configuration: Debug Any CPU ------
+1>  CerdaBank -> C:\Users\mharo\documents\visual studio 2015\Projects\CerdaBank\CerdaBank\bin\Debug\CerdaBank.exe
+========== Build: 1 succeeded, 0 failed, 0 up-to-date, 0 skipped ==========
