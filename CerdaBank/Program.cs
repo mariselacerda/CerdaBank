@@ -24,14 +24,14 @@ namespace CerdaBank
                     Console.WriteLine("Thank You for Visiting Goodbye");
                     break;
                 case "1":
-                    var account1 = new Account();
+                    //var account1 = new Account();
                     Console.Write("Please provide your email address: ");
                     var emailAddress = Console.ReadLine();
                     Console.Write("Please provide the type of account: ");
                     var typeofAccount = Console.ReadLine();
+                    var account1 = Bank.CreateAccount(emailAddress, AccountTypes.Checking, 0.0M);
 
-                    account1.EmailAddress = emailAddress;
-                    account1.AccountType = typeofAccount;
+                    //var account1 = new Account { EmailAddress = emailAddress, AccountType = typeofAccount };
                     Console.WriteLine($"AccountNumber:{account1.AccountNumber},TypeOfAccount: {account1.AccountType},EmailAddress: {account1.EmailAddress}, Balance: {account1.Balance:C}");
                     break;
                 case "2":
