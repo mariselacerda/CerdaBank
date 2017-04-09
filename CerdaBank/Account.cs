@@ -57,6 +57,12 @@ namespace CerdaBank
             Balance -= amount;
         }
 
+        public decimal getBalance()
+        {
+            return Balance; 
+        }
+
+
        #endregion
 
     }

@@ -30,5 +30,20 @@ namespace CerdaBank
                 account.Deposit(amount);
             }
         }
+
+        public static decimal WithDraw(int accountNumber, decimal amount)
+        {
+            var account = accounts.Where(a => a.AccountNumber == accountNumber).FirstOrDefault();
+            if ((account != null) & (account.getBalance() > amount))
+            {
+                account.withdraw(amount);
+                return amount;
+            }
+            else
+            {
+                return 0; 
+            } 
+
+        }
     }
 }

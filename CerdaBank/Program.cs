@@ -53,6 +53,13 @@ namespace CerdaBank
                         Bank.Deposit(accountNumber, amount);
                         break;
                     case "3":
+                        PrintAllAccounts();
+                        Console.WriteLine("Pick an account number to withdraw from: ");
+                        var accountNumber2 = Convert.ToInt32(Console.ReadLine());
+                        Console.Write("Amount to Withdraw: ");
+                        var amount2 = Convert.ToDecimal(Console.ReadLine());
+                        var withdrawresult = Bank.WithDraw(accountNumber2, amount2);
+                        Console.WriteLine($"You withdrew ${withdrawresult}");
                         break;
                     case "4":
                         PrintAllAccounts();
