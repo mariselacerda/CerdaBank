@@ -10,3 +10,7 @@ C:\GitHub\CerdaBank\CerdaBank\obj\Debug\CerdaBank.pdb
 C:\GitHub\CerdaBank\CerdaBank\obj\Debug\CerdaBank.csprojResolveAssemblyReference.cache
 C:\GitHub\CerdaBank\CerdaBank\bin\Debug\CerdaBank.exe
 C:\GitHub\CerdaBank\CerdaBank\bin\Debug\CerdaBank.pdb
+C:\GitHub\CerdaBank\CerdaBank\bin\Debug\EntityFramework.dll
+C:\GitHub\CerdaBank\CerdaBank\bin\Debug\EntityFramework.SqlServer.dll
+C:\GitHub\CerdaBank\CerdaBank\bin\Debug\EntityFramework.xml
+C:\GitHub\CerdaBank\CerdaBank\bin\Debug\EntityFramework.SqlServer.xml

@@ -9,11 +9,14 @@ namespace CerdaBank
     static class Bank
     {
         private static List<Account> accounts = new List<Account>();
+        private static BankModel db = new BankModel();
         public static Account CreateAccount(string emailAddress, AccountTypes typeOfAccount, decimal amount) 
         {
            var account = new Account { EmailAddress = emailAddress, AccountType = typeOfAccount };
            account.Deposit(amount);
-           accounts.Add(account);
+          // accounts.Add(account);
+            db.Accounts.Add(account);
+            db.SaveChanges(); //committs db changes
            return account; 
 
         }
