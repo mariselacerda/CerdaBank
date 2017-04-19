@@ -7,7 +7,6 @@ C:\Users\mharo\documents\visual studio 2015\Projects\CerdaBank\CerdaBank\obj\Deb
 C:\GitHub\CerdaBank\CerdaBank\bin\Debug\CerdaBank.exe.config
 C:\GitHub\CerdaBank\CerdaBank\obj\Debug\CerdaBank.exe
 C:\GitHub\CerdaBank\CerdaBank\obj\Debug\CerdaBank.pdb
-C:\GitHub\CerdaBank\CerdaBank\obj\Debug\CerdaBank.csprojResolveAssemblyReference.cache
 C:\GitHub\CerdaBank\CerdaBank\bin\Debug\CerdaBank.exe
 C:\GitHub\CerdaBank\CerdaBank\bin\Debug\CerdaBank.pdb
 C:\GitHub\CerdaBank\CerdaBank\bin\Debug\EntityFramework.dll

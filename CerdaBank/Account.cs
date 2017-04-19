@@ -11,7 +11,7 @@ namespace CerdaBank
     public class Account
     {
         #region StaticVars
-        private static int LastAccountNumber = 0;
+        //private static int LastAccountNumber = 0;
 
         #endregion
         #region Properties
