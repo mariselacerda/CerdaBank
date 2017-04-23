@@ -13,3 +13,7 @@ C:\GitHub\CerdaBank\CerdaBank\bin\Debug\EntityFramework.dll
 C:\GitHub\CerdaBank\CerdaBank\bin\Debug\EntityFramework.SqlServer.dll
 C:\GitHub\CerdaBank\CerdaBank\bin\Debug\EntityFramework.xml
 C:\GitHub\CerdaBank\CerdaBank\bin\Debug\EntityFramework.SqlServer.xml
+C:\GitHub\CerdaBank\CerdaBank\obj\Debug\CerdaBank.csprojResolveAssemblyReference.cache
+C:\GitHub\CerdaBank\CerdaBank\obj\Debug\CerdaBank.Migrations.InitialCreate.resources
+C:\GitHub\CerdaBank\CerdaBank\obj\Debug\CerdaBank.csproj.GenerateResource.Cache
+C:\GitHub\CerdaBank\CerdaBank\obj\Debug\CerdaBank.Migrations.AccountChanges.resources

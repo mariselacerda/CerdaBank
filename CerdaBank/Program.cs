@@ -21,6 +21,7 @@ namespace CerdaBank
                 Console.WriteLine("2: Deposit");
                 Console.WriteLine("3. Withdraw");
                 Console.WriteLine("4. Print all accounts");
+                Console.WriteLine("5. Print all transactions");
                 var optioninput = Console.ReadLine();
                 switch (optioninput)
                 {
@@ -37,13 +38,37 @@ namespace CerdaBank
                         {
                             Console.WriteLine($"{i + 1}. {accountTypes[i]}");
                         }
-                        var typeofAccount = Convert.ToInt32(Console.ReadLine());
-                        
-                        var account1 = Bank.CreateAccount(emailAddress, (AccountTypes)(typeofAccount-1), 0.0M);
+                        try
+                        {
+                            var typeofAccount = Convert.ToInt32(Console.ReadLine());
 
-                        //var account1 = new Account { EmailAddress = emailAddress, AccountType = typeofAccount };
-                        Console.WriteLine($"AccountNumber:{account1.AccountNumber},TypeOfAccount: {account1.AccountType},EmailAddress: {account1.EmailAddress}, Balance: {account1.Balance:C}");
-                        break;
+                            var account1 = Bank.CreateAccount(emailAddress, (AccountTypes)(typeofAccount - 1), 0.0M);
+
+                            //var account1 = new Account { EmailAddress = emailAddress, AccountType = typeofAccount };
+                            Console.WriteLine($"AccountNumber:{account1.AccountNumber},TypeOfAccount: {account1.AccountType},EmailAddress: {account1.EmailAddress}, Balance: {account1.Balance:C}");
+                        }
+                        catch (FormatException)
+                        {
+                            Console.WriteLine("Please select an account number from the account type list.");
+                        }
+                        catch (OverflowException)
+                        {
+
+                        }
+                        catch (ArgumentNullException ane)
+                        {
+                            Console.WriteLine($"Account Creation Failed: {ane.Message}");
+                        }
+                        catch (ArgumentException ae)
+                        {
+                            Console.WriteLine($"Account Creation Faile: {ae.Message}");
+
+                        }
+                        catch (Exception e)
+                        {
+                            Console.WriteLine("Invalid Selection Returning to Main Menu");
+                        }
+                            break;
                     case "2":
                         PrintAllAccounts();
                         Console.WriteLine("Pick an account number to deposit: ");
@@ -64,7 +89,14 @@ namespace CerdaBank
                     case "4":
                         PrintAllAccounts();
                         break;
+                    case "5":
+                        PrintAllAccounts();
+                        Console.WriteLine("Pick an account number to withdraw from: ");
+                        var accountNumber3 = Convert.ToInt32(Console.ReadLine());
+                        PrintAllTransactions(accountNumber3);
+                        break;
                     default:
+                        Console.WriteLine("Invalid Option: Please Try Again");
                         break;
                 }
             }
@@ -78,6 +110,15 @@ namespace CerdaBank
             foreach (var account in accounts)
             {
                 Console.WriteLine($"AccountNumber:{account.AccountNumber},TypeOfAccount: {account.AccountType},EmailAddress: {account.EmailAddress}, Balance: {account.Balance:C}");
+            }
+        }
+
+        private static void PrintAllTransactions(int accountNumber)
+        {
+            var transactions = Bank.GetAllTransactions(accountNumber);
+            foreach (var tran in transactions)
+            {
+                Console.WriteLine($"TransactionID:{tran.TransactionID},TypeOfTransaction: {tran.TypeOfTransaction},TransactionDate {tran.TransactionDate} TransactionDescription: {tran.Description} TransactionAmount: {tran.Amount}");
             }
         }
     }

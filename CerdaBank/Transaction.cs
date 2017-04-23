@@ -17,7 +17,7 @@ namespace CerdaBank
         public string Description { get; set; }       
         public TransactionType TypeOfTransaction { get; set; }
         public decimal Amount { get; set; }
-        [ForeignKey("Accounts")]
+        [ForeignKey("Account")]
         public int AccountNumber { get; set; }
         public virtual Account Account { get; set; } //"virtual" creates a foriegn key column in the Transaction table
 
